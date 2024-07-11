@@ -27,8 +27,6 @@ const headers = {
   'Content-Type': 'application/json' // Adjust content type if needed
 };
 
-  // const url = baseUrl + jew1+jew2+jew3+wat1+wat2+wat3;
-
 // Middleware to allow CORS
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*"); // Update * to your specific origin if needed
@@ -58,6 +56,26 @@ try{
   }}
 );
 
+// Get price Lists
+app.get('/items/getAllPrices', async (req, res) => {
+try{
+    
+    const url = 'https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/items-selling-prices-settings/v1?request.itemCodes=FR2765&request.itemCodes=FR2768&request.itemCodes=FR2769&request.itemCodes=FR2770&request.itemCodes=FR2775&request.itemCodes=FR2776&request.itemCodes=FR2777&request.itemCodes=FR2778&request.itemCodes=FR2779&request.fields=';
+  
+    // Make a GET request to the Swagger page with defined headers
+    const response = await axios.get(url, { headers });
+
+    // Assuming the Swagger page returns JSON data
+    const swaggerData = response.data;
+    console.log('Received JSON data from Retail Price:', swaggerData);
+
+    // Respond with the data received from the API
+    res.json(swaggerData);
+  } catch (error) {
+    console.error('Error fetching data for Retail Price:', error);
+    res.status(500).send('Error fetching data for Retail Price');
+  }}
+);
 
 app.get('/items/Image/:itemCode', async (req, res) => {
 	const itemCode = req.params.itemCode; // Get item code from query parameters
