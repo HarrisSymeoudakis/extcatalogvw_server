@@ -6,15 +6,14 @@ import cors from 'cors';
 const app = express();
 const port = process.env.PORT || 2200;
 const baseUrl = "https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/products-search/v1"
-const vw1 = "?ids=FR2765                           X" ; 
-const vw2 = "&ids=FR2768                           X" ; 
-const vw3 = "&ids=FR2769                           X" ; 
-const vw4 = "&ids=FR2770                           X" ; 
-const vw5 = "&ids=FR2775                           X" ; 
-const vw6 = "&ids=FR2776                           X" ; 
-const vw7 = "&ids=FR2777                           X" ; 
-const vw8 = "&ids=FR2778                           X" ; 
-const vw9 = "&ids=FR2779                           X" ; 
+const vw1 = "?ids=DE010009                         X" ; 
+const vw2 = "&ids=DE010039                         X" ; 
+const vw3 = "&ids=DE010040                         X" ; 
+const vw4 = "&ids=DE010041                         X" ; 
+const vw5 = "&ids=DE010042                         X" ; 
+const vw6 = "&ids=DE010043                         X" ; 
+
+
 const fields = "&fields=UserFields";
 
 // Encode username and password for Basic Authentication
@@ -38,7 +37,7 @@ app.use((req, res, next) => {
 app.get('/items/getAllCatalog', async (req, res) => {
 try{
     
-    const url = baseUrl + vw1+vw2+vw3+vw4+vw5+vw6+vw7+vw8+vw9+fields;
+    const url = baseUrl + vw1+vw2+vw3+vw4+vw5+vw6+fields;
     // Define the headers for the request
   
     // Make a GET request to the Swagger page with defined headers
