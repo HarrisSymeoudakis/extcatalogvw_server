@@ -12,7 +12,6 @@ const vw3 = "&ids=DE010040                         X" ;
 const vw4 = "&ids=DE010041                         X" ; 
 const vw5 = "&ids=DE010042                         X" ; 
 const vw6 = "&ids=DE010043                         X" ; 
-
 const fields = "&fields=UserFields";
 
 // Encode username and password for Basic Authentication
@@ -72,9 +71,8 @@ try{
   } catch (error) {
     console.error('Error fetching data for Retail Price:', error);
     res.status(500).send('Error fetching data for Retail Price');
-   }}
+  }}
 );
-
 
 app.get('/items/Image/:itemCode', async (req, res) => {
 	const itemCode = req.params.itemCode; // Get item code from query parameters
