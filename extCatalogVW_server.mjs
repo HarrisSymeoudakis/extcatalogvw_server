@@ -58,7 +58,7 @@ try{
 app.get('/items/getAllPrices', async (req, res) => {
 try{
     
-    const url = 'https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/items-selling-prices-settings/v1?request.itemCodes=FR2765&request.itemCodes=FR2768&request.itemCodes=FR2769&request.itemCodes=FR2770&request.itemCodes=FR2775&request.itemCodes=FR2776&request.itemCodes=FR2777&request.itemCodes=FR2778&request.itemCodes=FR2779&request.fields=';
+    const url = 'https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/items-selling-prices-settings/v1?request.itemCodes=DE010009&request.itemCodes=DE010039&request.itemCodes=DE010040&request.itemCodes=DE010041&request.itemCodes=DE010042&request.itemCodes=DE010043&request.fields=';
   
     // Make a GET request to the Swagger page with defined headers
     const response = await axios.get(url, { headers });
