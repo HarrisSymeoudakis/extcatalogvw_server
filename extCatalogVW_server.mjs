@@ -73,8 +73,9 @@ try{
   } catch (error) {
     console.error('Error fetching data for Retail Price:', error);
     res.status(500).send('Error fetching data for Retail Price');
-  }}
+   }}
 );
+
 
 app.get('/items/Image/:itemCode', async (req, res) => {
 	const itemCode = req.params.itemCode; // Get item code from query parameters
