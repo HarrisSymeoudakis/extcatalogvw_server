@@ -2,7 +2,6 @@ import axios from 'axios'; // Import Axios for making HTTP requests
 import express from 'express';
 import cors from 'cors';
 
-
 const app = express();
 const port = process.env.PORT || 2200;
 const baseUrl = "https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/products-search/v1"
