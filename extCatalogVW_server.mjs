@@ -6,12 +6,12 @@ import cors from 'cors';
 const app = express();
 const port = process.env.PORT || 2200;
 const baseUrl = "https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/products-search/v1"
-const vw1 = "?ids=DE010009                         X" ; 
-const vw2 = "&ids=DE010039                         X" ; 
-const vw3 = "&ids=DE010040                         X" ; 
-const vw4 = "&ids=DE010041                         X" ; 
-const vw5 = "&ids=DE010042                         X" ; 
-const vw6 = "&ids=DE010043                         X" ; 
+const vw1 = "?ids=DE010039                         X" ; 
+const vw2 = "&ids=DE010040                         X" ; 
+const vw3 = "&ids=DE010041                         X" ; 
+const vw4 = "&ids=DE010042                         X" ; 
+const vw5 = "&ids=DE010043                         X" ; 
+const vw6 = "&ids=DE010044                         X" ; 
 const fields = "&fields=UserFields";
 
 // Encode username and password for Basic Authentication
@@ -57,7 +57,7 @@ try{
 app.get('/items/getAllPrices', async (req, res) => {
 try{
     
-    const url = 'https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/items-selling-prices-settings/v1?request.itemCodes=DE010009&request.itemCodes=DE010039&request.itemCodes=DE010040&request.itemCodes=DE010041&request.itemCodes=DE010042&request.itemCodes=DE010043&request.fields=';
+    const url = 'https://90478305-partner-retail-ondemand.cegid.cloud/Y2/90478305_003_TEST/api/items-selling-prices-settings/v1?request.itemCodes=DE010039&request.itemCodes=DE010040&request.itemCodes=DE010041&request.itemCodes=DE010042&request.itemCodes=DE010043&request.itemCodes=DE010044&request.fields=';
   
     // Make a GET request to the Swagger page with defined headers
     const response = await axios.get(url, { headers });
